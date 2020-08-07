@@ -8,7 +8,8 @@
     <li>@Html.ActionLink(a.Name, "Details", "Engineer", new { id = a.EngineerId })</li>
   }
 </ul>
-
+<p>@Html.ActionLink("Add an engineer to the roster", "Create")</p><br>
+<hr />
 <h3>Machines:</h3>
 <ul>
   @foreach (var a in Model.Machines)
@@ -16,3 +17,5 @@
     <li>@Html.ActionLink(a.Name, "Details", "Machine", new { id = a.MachineId })</li>
   }
 </ul>
+<p>@Html.ActionLink("Add a new machine to the floor", "Create")</p>
+<p>@Html.ActionLink("Return Home", "Index", "Home")</p>
