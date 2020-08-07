@@ -19,3 +19,6 @@ else
     }
   </ul>
 }
+
+<p>@Html.ActionLink($"Edit {@Model.Name}'s Details", "Edit", "Machine", new { id = Model.MachineId})</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

@@ -42,5 +42,22 @@ namespace Factory.Controllers
         .FirstOrDefault(machine => machine.MachineId == id);
       return View(ThisMachine);
     }
+    public ActionResult Edit(int id)
+    {
+      var ThisMachine = _db.Machines.FirstOrDefault(a => a.MachineId == id);
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
+      return View(ThisMachine);
+    }
+    [HttpPost]
+    public ActionResult Edit(Machine machine, int engineerId)
+    {
+      if (engineerId != 0)
+      {
+        _db.EngineerMachine.Add(new EngineerMachine() { EngineerId = engineerId, MachineId = machine.MachineId });
+      }
+      _db.Entry(machine).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
