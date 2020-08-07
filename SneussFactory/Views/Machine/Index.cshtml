@@ -1,0 +1,18 @@
+@using System.Collections.Generic
+@using Factory.Models
+
+<h1>Machine Inventory</h1>
+<br>
+<h3>Machines: </h3><br>
+  @if (Model.Count == 0)
+  {
+    <p>No machines are currently on the floor.</p>
+  }
+<ul>
+  @foreach (Machine a in Model)
+  {
+    <li>@a.Name</li>
+  }
+</ul>
+<br>
+@Html.ActionLink("Add a new machine to the floor", "Create")

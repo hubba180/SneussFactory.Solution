@@ -36,7 +36,7 @@ _Better description here_
 
 | Spec | Input | Output | Status |
 | :-------------     | :------------- | :------------- | :------------- | 
-| As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines. |  See all engineers |  list of names: Kyle, Jane, etc. | Red |
+| As the factory manager, I need to be able to see a list of all engineers, and I need to be able to see a list of all machines. |  See all engineers |  list of names: Kyle, Jane, etc. | Green |
 | As the factory manager, I need to be able to select a engineer, see their details, and see a list of all machines that engineer is licensed to repair. I also need to be able to select a machine, see its details, and see a list of all engineers licensed to repair it. | See LaughBox Details |  Engineer: Kyle | Red |
 | As the factory manager, I need to add new engineers to our system when they are hired. I also need to add new machines to our system when they are installed. | Add Engineer: Katlyn | Kyle, Jane, Katlyn | Red |
 | As the factory manager, I should be able to add new machines even if no engineers are employed. I should also be able to add new engineers even if no machines are installed. | Katlyn | Kyle, Jane, Katlyn | Red |
