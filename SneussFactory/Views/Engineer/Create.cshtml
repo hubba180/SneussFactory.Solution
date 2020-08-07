@@ -1,0 +1,17 @@
+<h1>Add an Engineer</h1>
+
+@Factory.Models.Engineer
+
+@using (Html.BeginForm())
+{
+  @Html.Label("Name: ")
+  @Html.TextBoxFor(model => model.Name)
+  <br><br>
+  @Html.Label("Date of Hire: ")
+  @Html.TextBoxFor(model => model.HireDate, new { type = "date"})
+  <br><br>
+  @Html.Label("Notes: ")
+  @Html.TextBoxFor(model => model.Notes)
+  <br><br>
+  <input type="submit" value="Add engineer" class="btn btn-default" />
+}
