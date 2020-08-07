@@ -21,5 +21,6 @@ else
 }
 
 <p>@Html.ActionLink($"Edit {@Model.Name}'s Details", "Edit", "Machine", new { id = Model.MachineId})</p>
+<p>@Html.ActionLink($"Add an additional engineer", "AddEngineer", "Machine", new { id = Model.MachineId})</p>
 <p>@Html.ActionLink($"Delete {@Model.Name}", "Delete", "Machine", new { id = Model.MachineId})</p>
 <p>@Html.ActionLink("Return Home", "Index", "Home")</p>

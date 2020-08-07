@@ -1,0 +1,15 @@
+@model Factory.Models.Machine
+
+<h2>Add a new certification for @Model.Name</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.MachineId)
+
+    @Html.Label("Select Engineer")
+    @Html.DropDownList("EngineerId")
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Machine Inventory", "Index")</p>
+<p>@Html.ActionLink("Return Home", "Index", "Home")</p>
