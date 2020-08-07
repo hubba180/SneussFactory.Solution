@@ -12,12 +12,17 @@
   {
     <p>It seems @Model.Name is not certified on any Machines</p>
   }
-<ul>
+<ol>
   @foreach (var a in Model.Machines)
   {
     <li>@Html.ActionLink(a.Machine.Name, "Details", "Machine", new { id = a.Machine.MachineId })</li>
+    @using (Html.BeginForm("DeleteMachine", "Engineer"))
+    {
+      @Html.Hidden("joinId", @a.EngineerMachineId)
+      <input type="submit" value="Delete"/>
+    }
   }
-</ul>
+</ol>
 
 <p>@Html.ActionLink($"Edit {@Model.Name}'s Details", "Edit", "Engineer", new { id = Model.EngineerId})</p>
 <p>@Html.ActionLink($"Add an additional machine", "AddMachine", "Engineer", new { id = Model.EngineerId})</p>
