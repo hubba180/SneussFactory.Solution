@@ -20,4 +20,5 @@
 </ul>
 
 <p>@Html.ActionLink($"Edit {@Model.Name}'s Details", "Edit", "Engineer", new { id = Model.EngineerId})</p>
+<p>@Html.ActionLink($"Delete {@Model.Name}", "Delete", "Engineer", new { id = Model.EngineerId})</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
