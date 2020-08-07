@@ -1,0 +1,21 @@
+@model Factory.Models.Machine
+
+<h1>Showing details for @Model.Name</h1>
+
+<h3>Notes: @Model.Notes</h3>
+
+<h3>Maintained by the following:</h3>
+@if (Model.Engineers.Count == 0)
+{
+  <p>This Machine is not being maintained by any Engineers</p>
+}
+else
+{
+  <p>Engineering:</p>
+  <ul>
+    @foreach (var engineer in Model.Engineers)
+    {
+      <li>@Html.ActionLink(engineer.Engineer.Name, "Details", "Engineer", new { id = engineer.Engineer.EngineerId })</li>
+    }
+  </ul>
+}

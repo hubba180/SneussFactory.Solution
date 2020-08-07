@@ -36,8 +36,11 @@ namespace Factory.Controllers
     }
     public ActionResult Details(int id)
     {
-      id = 0;
-      return View();
+      var ThisMachine = _db.Machines
+        .Include(machine => machine.Engineers)
+          .ThenInclude(join => join.Engineer)
+        .FirstOrDefault(machine => machine.MachineId == id);
+      return View(ThisMachine);
     }
   }
 }
