@@ -1,0 +1,20 @@
+@model Factory.Models.Engineer
+
+<h1>@Model.Name's Details</h1>
+
+<p>Personal Notes: @Model.Notes</p>
+
+<p>Hire Date: @Model.HireDate</p>
+
+<h3>Certified to maintain the following Machines: </h3>
+<br>
+  @if (Model.Machines.Count == 0)
+  {
+    <p>It seems @Model.Name is not certified on any Machines</p>
+  }
+<ul>
+  @foreach (var a in Model.Machines)
+  {
+    <li>@Html.ActionLink(a.Machine.Name, "Details", "Machine", new { id = a.Machine.MachineId })</li>
+  }
+</ul>

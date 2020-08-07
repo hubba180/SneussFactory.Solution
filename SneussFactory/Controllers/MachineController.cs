@@ -34,5 +34,10 @@ namespace Factory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    public ActionResult Details(int id)
+    {
+      id = 0;
+      return View();
+    }
   }
 }
