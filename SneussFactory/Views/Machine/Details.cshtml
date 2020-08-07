@@ -16,6 +16,11 @@ else
     @foreach (var engineer in Model.Engineers)
     {
       <li>@Html.ActionLink(engineer.Engineer.Name, "Details", "Engineer", new { id = engineer.Engineer.EngineerId })</li>
+      @using (Html.BeginForm("DeleteEngineer", "Machine"))
+      {
+        @Html.Hidden("joinId", @engineer.EngineerMachineId)
+        <input type="submit" value="Delete"/>
+      }
     }
   </ul>
 }
