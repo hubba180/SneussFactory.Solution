@@ -13,5 +13,8 @@
   @Html.Label("Notes: ")
   @Html.TextBoxFor(model => model.Notes)
   <br><br>
+  @Html.Label("Machine certification: ")
+  @Html.DropDownList("MachineId")
+  <br><br>
   <input type="submit" value="Add engineer" class="btn btn-default" />
 }
