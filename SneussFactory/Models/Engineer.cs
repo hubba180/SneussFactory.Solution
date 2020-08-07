@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Factory.Models
 {
   public class Engineer
@@ -6,5 +8,6 @@ namespace Factory.Models
     public string Name { get; set; }
     public System.DateTime HireDate { get; set; }
     public string Notes { get; set; }
+    public ICollection<EngineerMachine> Machines { get; set; }
   }
 }
