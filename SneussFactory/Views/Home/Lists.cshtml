@@ -1,0 +1,18 @@
+@model Factory.Models.SneussFactoryContext
+<h1>Factory Details</h1>
+
+<h3>Engineering:</h3>
+<ul>
+  @foreach (var a in Model.Engineers)
+  {
+    <li>@Html.ActionLink(a.Name, "Details", "Engineer", new { id = a.EngineerId })</li>
+  }
+</ul>
+
+<h3>Machines:</h3>
+<ul>
+  @foreach (var a in Model.Machines)
+  {
+    <li>@Html.ActionLink(a.Name, "Details", "Machine", new { id = a.MachineId })</li>
+  }
+</ul>
