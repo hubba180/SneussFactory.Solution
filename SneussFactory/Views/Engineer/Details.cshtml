@@ -18,3 +18,6 @@
     <li>@Html.ActionLink(a.Machine.Name, "Details", "Machine", new { id = a.Machine.MachineId })</li>
   }
 </ul>
+
+<p>@Html.ActionLink($"Edit {@Model.Name}'s Details", "Edit", "Engineer", new { id = Model.EngineerId})</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

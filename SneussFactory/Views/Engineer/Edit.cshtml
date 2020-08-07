@@ -1,0 +1,21 @@
+@model Factory.Models.Engineer
+
+<h1>Edit @Model.Name</h1>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.EngineerId)
+  @Html.Label("Name: ")
+  @Html.EditorFor(model => model.Name)
+  <br><br>
+  @Html.Label("Date of Hire: ")
+  @Html.EditorFor(model => model.HireDate, new { type = "date"})
+  <br><br>
+  @Html.Label("Notes: ")
+  @Html.EditorFor(model => model.Notes)
+  <br><br>
+  @Html.Label("Machine certification: ")
+  @Html.DropDownList("MachineId")
+  <br><br>
+  <input type="submit" value="Save" class="btn btn-default" />
+}
