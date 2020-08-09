@@ -46,6 +46,7 @@ _Better description here_
 
 ## **💻SETUP**
 
+_NOTICE: The following instructions rely on the intended user to have mySQL Community server and Workbench installed in order to utilize SQL's local server. If mySQL is not installed, users may find a download for the SQL installer [here](https://dev.mysql.com/downloads/file/?id=484914) to install the latest version of Community server and Workbench. Keep track of your local server's password, it will need to be appended to the appsettings.json after "pwd="_. 
 
 copy this url to clone this project to your local system:
 ```html
@@ -62,7 +63,7 @@ Once copied, select "Clone Repository" from within VSCode & paste the copied lin
 
 With the project open to the root directory, navigate to the production directory with the following command in your terminal.
 ```js 
-cd ProjectName
+cd SneussFactory.Solution
 ```
 
 Then, install the necessary packages with the following command
@@ -70,16 +71,21 @@ Then, install the necessary packages with the following command
 dotnet restore 
 ```
 
+Next, apply the SQL database to your local workbench with the following command
+```js 
+dotnet ef database update
+```
+
 Finally, you can start the program with this command.
 ```js 
 dotnet run 
 ```
 
-![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/dotnet-readme.gif "How to clone repo")
+<!-- ![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/dotnet-readme.gif "How to clone repo")
 
 [w-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/windows-pass-sm.png "↓ Windows Compatibility Status ↓"
 [l-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/linux-pass-sm.png "↓ Linux Compatibility Status ↓"
-[m-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/mac-pass-sm.png "↓ macOS (OSX) Compatibility Status ↓"
+[m-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/mac-pass-sm.png "↓ macOS (OSX) Compatibility Status ↓" -->
 ## **PROTECTING YOUR DATA**
 
 #### **Step 1: From within VSCode in the root project directory, we will create a .gitignore file**
