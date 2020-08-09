@@ -1,0 +1,14 @@
+body {
+  background-image: url(https://images.pexels.com/photos/357440/pexels-photo-357440.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jumbotron {
+  text-align: center;
+}
+.background {
+  background-color: rgba(241, 194, 107, 0.856);
+  height: 100vh;
+}
